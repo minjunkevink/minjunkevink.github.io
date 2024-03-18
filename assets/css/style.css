@@ -11,7 +11,7 @@
   /* background-size: cover;  */
   margin: -31px; 
   margin-left:-7px;
-  border: 6px solid rgba(0, 77, 64, 0.4); 
+  border: 6px solid rgba(0, 162, 255, 0.4); 
   border-radius: 50% !important;
 }
 
@@ -116,7 +116,7 @@
 }
 
 .contactme:hover{
-  color: #00796b;
+  color: #352efd;
   background-color: white;
 }
 /* main body */
@@ -124,7 +124,7 @@
 /* body-color */
 
 body {
-  color: #333;
+  color: #9bff71;
   font-size: 18px;
 }
 
@@ -140,7 +140,7 @@ body {
 } */
 
 a {
-  color: #004d40;
+  color: #b52bb5;
 }
 
 /* main blockqoute */
