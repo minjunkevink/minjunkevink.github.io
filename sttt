@@ -1,0 +1,31 @@
+import numpy as np
+from scipy.optimize import curve_fit
+import matplotlib.pyplot as plt
+
+# Provided data points
+time = np.array([1.6, 4, 6.4, 8.75, 11.2, 13.65, 15.95, 18.5, 20.8, 23.2, 25.55, 27.9])
+position = np.array([1.952, 1.928, 1.902, 1.872, 1.854, 1.834, 1.809, 1.79, 1.772, 1.754, 1.734, 1.714])
+
+# Curve fitting function A*exp(-gamma*x)
+def model(x, A, gamma):
+    return A * np.exp(-gamma * x)
+
+# Perform the curve fitting
+params, covariance = curve_fit(model, time, position)
+
+# Parameters A and gamma
+A, gamma = params
+A, gamma
+
+# Let's plot the data and the fitted curve
+time_fitted = np.linspace(min(time), max(time), 100)
+position_fitted = model(time_fitted, A, gamma)
+
+plt.figure(figsize=(10, 6))
+plt.scatter(time, position, label='Data')
+plt.plot(time_fitted, position_fitted, color='red', label=f'Fitted Curve: $A \cdot e^{{-\gamma x}}$')
+plt.title('Curve Fitting to the Data')
+plt.xlabel('Time (s)')
+plt.ylabel('Position (m)')
+plt.legend()
+plt.show()
