@@ -124,7 +124,7 @@
 /* body-color */
 
 body {
-  color: #9bff71;
+  color: #000000;
   font-size: 18px;
 }
 
@@ -237,7 +237,7 @@ ul.side-nav li {
 
 ul.side-nav.fixed a {
   box-sizing: content-box;
-  color: rgb(16, 202, 56);
+  color: rgb(0, 0, 0);
   display: block;
   line-height: 100%;
   padding: 10px 0 12px;
